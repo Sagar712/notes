@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <title>Log in | Sign up</title>
+</head>
+
+<body>
+
+    <div class='loaderHolder'>
+        <div class='circleLoader'></div>
+    </div>
+
+    <div class="border">
+        <div class="slide1">
+            <h1>Log in</h1>
+            <p class="emailHero">Email <span style="color: red;">*</span> :</p> <input type="text" id="EmailId">
+            <button onclick="Login()">Log in</button>
+        </div>
+    </div>
+
+
+    <div class="border">
+        <div class="slide2">
+            <h1>Sign up</h1>
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td><input type="text" id="nameF"></td>
+                </tr>
+                <tr>
+                    <td>Email <span style="color: red;">*</span> :</td>
+                    <td><input type="text" id="emailF"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="text" id="passF"></td>
+                </tr>
+            </table>
+            <div class="btn-cls">
+                <button onclick="SignUp()">Submit & Log in</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const Base_URL = 'https://backup-data-server.herokuapp.com/';
+        //const Base_URL = 'http://localhost:8080/';
+        function Login() {
+            document.querySelector('.loaderHolder').classList.add('active');
+            const email = document.getElementById('EmailId').value;
+            fetch(Base_URL + email)
+            .then(res => {
+                return res.json();
+            })
+            .then(response => {
+                document.querySelector('.loaderHolder').classList.remove('active');
+                if (response.length == 1) {
+
+                    const obj = response[0];
+                    let LocalStorage = JSON.parse(localStorage.getItem('React-App-Script'));
+                    LocalStorage.username = obj.email;
+                    localStorage.setItem('React-App-Script', JSON.stringify(LocalStorage))
+
+                    alert("Login successful!")
+                    window.location.href = "."
+                }
+                else
+                    alert("Login failed!")
+            })
+            .catch(e => {
+                document.querySelector('.loaderHolder').classList.remove('active');
+                alert(e)
+            })
+        }
+
+        function SignUp() {
+            const name = document.getElementById('nameF').value;
+            const email = document.getElementById('emailF').value;
+            const password = document.getElementById('passF').value;
+            
+            document.querySelector('.loaderHolder').classList.add('active');
+
+            const allInfo = {
+                name: name,
+                email: email,
+                password: password,
+            }
+
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(allInfo)
+            };
+
+            fetch(Base_URL, requestOptions)
+            .then(res => {
+                return res.json();
+            })
+            .then(response => {
+                document.querySelector('.loaderHolder').classList.remove('active');
+                console.log(response)
+                if (response.name === "Failed !!") {
+                    alert(response.email)
+                }
+                else {
+                    let LocalStorage = JSON.parse(localStorage.getItem('React-App-Script'));
+                    LocalStorage.username = obj.email;
+                    localStorage.setItem('React-App-Script', JSON.stringify(LocalStorage))
+                    alert("Signup successful")
+                    window.location.href = "."
+                }
+            })
+            .catch(e => {
+                document.querySelector('.loaderHolder').classList.remove('active');
+                alert(e)
+            })
+        }
+    </script>
+
+</body>
+
+</html>

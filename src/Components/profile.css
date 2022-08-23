@@ -1,0 +1,170 @@
+.profilepage1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--body-background);
+    z-index: 1111;
+    transform: translateX(100%);
+    transition: 0.4s all ease;
+}
+.profilepage1.active{
+    transform: translateX(0%);
+    transition: 0.4s all ease;
+}
+
+.profileHere{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userNameHere{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--username);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--font-col);
+}
+.userNameHere p{
+    margin: 1rem;
+    max-width: 18rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--font-col);
+}
+
+.backbtnar{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    height: 3rem;
+    justify-content: flex-end;
+}
+
+.buttonset{
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttonset button{
+    height: 2.5rem;
+    width: 6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid var(--login-btn);
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn1{
+    background-color: rgb(63, 63, 63);
+    color: white;
+}
+.btn2{
+    background-color: rgb(255, 187, 60);
+    color: rgb(0, 0, 0);
+}
+.buttonset button:active{
+    transform: scale(0.95);
+}
+
+.backBtn{
+    margin-right: 0rem;
+    color: var(--font-col);
+    height: 2rem;
+    width: 4.7rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid var(--font-col);
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.backBtn:active{
+    background-color: rgb(119, 119, 119);
+    transform: scale(0.97);
+}
+
+.changeNightMode{
+    width: 30%;
+    height: 3rem;
+    background-color: var(--edit-input-body);
+    border: 2px solid var(--edit-input-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-col);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.changeNightMode:active{
+    background-color: grey;
+}
+
+.toggleme{
+    height: 2rem;
+    width: 4rem;
+    background-color: rgb(42, 101, 153);
+    border-radius: 1rem;
+    transform: scale(0.6);
+    transition: 0.2s all ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.toggleme.move{
+    background-color: rgb(130, 165, 196);
+    transition: 0.2s all ease;
+}
+
+.circle{
+    height: 2rem;
+    width: 2rem;
+    background-color: rgb(130, 165, 196);
+    border-radius: 1rem;
+    transform: translateX(100%);
+    transition: 0.2s all ease;
+}
+.circle.move{
+    transform: translateX(0);
+    transition: 0.2s all ease;
+    background-color: rgb(42, 101, 153);
+}
+
+@media screen and (max-width:1110px)  {
+    .changeNightMode{
+        width: 90%;
+    }
+}
+
+.fas.fa-trash-alt{
+    color: red;
+    margin-right: 1.5rem;
+    font-size: 1.3rem;
+}
+.fab.fa-whatsapp{
+    color: var(--green-flag);
+    margin-right: 1.4rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width:930px){
+    .buttonset{
+        width: 90%;
+    }
+}

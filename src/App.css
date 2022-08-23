@@ -1,0 +1,129 @@
+:root{
+  --body-background: #252525;
+  --font-col: #fff;
+  --eclipse-col: #ffffff;
+  --plus-icon-back: #C4C4C4;
+  --filetitle: #C4C4C4;
+  --logo-font: #FFC149;
+  --logo: #FFD686;
+  --item-back: #616161;
+  --item-back-mob: #313131;
+  --item-border: #C4C4C4;
+  --item-font: #ffffff;
+  --lock-back: #C4C4C4;
+  --menu-itemcol: #464646;
+  --green-flag:rgb(0, 204, 68);
+  --yellow-flag: rgb(223, 223, 0);
+
+  --edit-header:rgb(37, 37, 37);
+  --edit-header-mob: rgb(37, 37, 37);
+  --edit-content: rgb(75, 75, 75);
+  --edit-input-body: rgb(68, 68, 68);
+  --edit-input-border: rgb(197, 197, 197);
+  --edit-icon-back:rgb(75, 75, 75);
+
+  --menu-box:rgb(88, 88, 88);
+
+  --username: rgb(0, 0, 0);
+  --login-btn: orange;
+  --copyright: #C4C4C4;
+  --info-text: rgb(190, 190, 190);
+
+  --popup-back: #1d2b2e;
+  --popup-input: #273c41;
+}
+
+
+[data-theme="dark"] {
+  --body-background: #ffffff;
+  --font-col: rgb(0, 0, 0);
+  --eclipse-col: #020202;
+  --plus-icon-back: #C4C4C4;
+  --filetitle: #333333;
+  --logo-font: #362400;
+  --logo: #332100;
+  --item-back: #E8E8E8;
+  --item-back-mob: #E8E8E8;
+  --item-border: #616161;
+  --item-font: #000000;
+  --lock-back: #C4C4C4;
+  --menu-itemcol: #E8E8E8;
+  --green-flag:rgb(0, 161, 54);
+  --yellow-flag: rgb(223, 223, 0);
+
+  --edit-header:rgb(155, 155, 155);
+  --edit-header-mob: rgb(255, 255, 255);
+  --edit-content: #E8E8E8;
+  --edit-input-body: #E8E8E8;
+  --edit-input-border: #616161;
+  --edit-icon-back:rgb(104, 104, 104);
+
+  --menu-box:rgb(189, 189, 189);
+
+  --username: rgb(218, 218, 218);
+  --login-btn: rgb(63, 63, 63);
+  --copyright: #5c5c5c;
+  --info-text: rgb(54, 54, 54);
+
+  --popup-back: #88a2a7;
+  --popup-input: #afced6;
+}
+
+.parent{
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: rgb(167, 167, 167);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container{
+  background-color: var(--body-background);
+  flex: 1;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 100vw;
+  overflow-y: hidden;
+}
+
+@media screen and (min-width:1109px)  {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    transition: 1s ease;
+  }
+  ::-webkit-scrollbar-track:hover{
+    background: var(--item-back); 
+    border-radius: 7px;
+    transition: 1s ease;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--font-col); 
+    border-radius: 7px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--item-border); 
+  }
+}
+
+
+@media screen and (max-width:1110px)  {
+  .container{
+      flex: 1;
+      max-width: 100vw;
+  }
+}

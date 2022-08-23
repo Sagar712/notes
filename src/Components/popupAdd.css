@@ -1,0 +1,123 @@
+.bigContainer{
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.527);
+    display: none;
+}
+.bigContainer.active{
+    display: block;
+}
+.popupTask{
+    z-index: 1000;
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    width: 50vw;
+    height: 75vh;
+    border-radius: 10px;
+    background-color:var(--popup-back);
+    opacity: 1;
+    transition: 0.2s all ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    visibility: visible;
+    transform: translate(-50%, 0%);
+    transition: all 0.3s ease;
+}
+
+.popupTask.active{
+    transform: translate(-50%, -110%);
+    transition: all 0.3s ease;
+}
+
+.closebutn{
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    top: 0;
+    right: 0;
+    background-color: rgb(182, 59, 59);
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+.closebutn:active{
+    background-color: rgb(136, 41, 41);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.taskTitle{
+    width: 90%;
+}
+
+.taskTitle input{
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--popup-input);
+    color: var(--font-col);
+    margin-top: 1rem;
+}
+.description{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description textarea{
+    width: 90%;
+    height: 80%;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--popup-input);
+    color: var(--font-col);
+}
+
+.finalbtns{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.finalbtns button{
+    outline: none;
+    border: black solid 2px ;
+    background-color: var(--font-col);
+    color: var(--body-background);
+    height: 3rem;
+    width: 6.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.finalbtns button:active{
+    border: 1px solid white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width:1110px)  {
+    .popupTask, .editTask{
+        width: 96vw;
+        height: 23rem;
+    }
+}

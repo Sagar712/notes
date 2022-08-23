@@ -1,0 +1,100 @@
+@import url("../App.css");
+.sample{
+    height: 3.5rem;
+    width: 98%;
+    margin: auto auto;
+    margin-bottom: 0.9rem;
+    background-color: var(--item-back);
+    border: 2px solid var(--item-border);
+    color: var(--item-font);
+    position: relative;
+    z-index: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.backBtn{
+    position: absolute;
+    right: 8%;
+    color: var(--font-col);
+    height: 2rem;
+    width: 4.7rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid var(--font-col);
+}
+.status{
+    position: absolute;
+    width: 3rem;
+    height: 100%;
+    margin-left: 0.3rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.sample:active{
+    background-color: gray;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.status i{
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--lock-back);
+    color: black;
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.sample h2{
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    max-width: 100%;
+    display: flex;
+    color: var(--item-font);
+    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.contentContainer{
+    min-height: 100%;
+    margin-left: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+}
+
+@media screen and (max-width:1110px)  {
+    .sample{
+        height: 3.9rem;
+        width: 100%;
+        margin-bottom: 0;
+        background-color: var(--item-back-mob);
+        border: none;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        color: var(--item-font);
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .sample:last-child{
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,235 @@
+@import '../App.css';
+.edit{
+    flex: 0.70;
+    background-color: var(--body-background);
+    border: 2px solid var(--edit-input-border);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 96%;
+}
+
+.copyright{
+    position: fixed;
+    bottom: 4rem;
+    font-size: 1rem;
+    font-style: normal;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--copyright);
+}
+
+.inputKey{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--edit-header);
+}
+
+.inputKey input{
+
+    -webkit-text-security: disc;
+    height: 2rem;
+    margin-left: 1rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    background-color: var(--edit-input-body);
+    border-radius: 5px;
+    border: 2px solid var(--edit-input-border);
+    color: var(--font-col);
+}
+
+.tools{
+    height: 100%;
+    min-width: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.copyicon, .edticon, .delicon{
+    height: 2.3rem;
+    width: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    background-color: var(--edit-icon-back);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.copyicon:active, .edticon:active, .delicon:active{
+    background-color: rgb(122, 122, 122);
+}
+
+
+.copyicon i{
+    color: white;
+}
+.delicon i{
+    color: rgb(255, 107, 62);
+}
+.edticon i{
+    color: rgb(69, 210, 253);
+}
+
+.decryptedMsg{
+    width: 100%;
+    font-size: 1.05rem;
+    background-color: var(--edit-content);
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.decryptedMsg pre{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    margin: 0.8rem;
+    outline: none;
+    color: var(--font-col);
+    min-height: 30%;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    line-height: 170%;
+}
+
+.addbutnn button{
+    width: 40rem;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: rgb(182, 59, 59);
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.addbutnn button:active{
+    background-color: rgb(128, 30, 30);
+}
+
+.containsinputs{
+    width: 100%;
+    background-color: var(--edit-header);
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.clos{
+    height: 100%;
+    width: 90%;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.addbtnbar{
+    display: none;
+}
+.menuitems{
+    display: none;
+    
+}
+
+
+@media screen and (max-width:1110px)  {
+    .edit{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1111;
+        flex: 1;
+        border: none;
+        border-radius: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        transform: translateX(100%);
+        transition: 0.3s all ease;
+    }
+    .edit.active{
+        transform: translateX(0%);
+        transition: 0.3s all ease;
+    }
+    .inputKey input{
+        height: 2rem;
+        margin-left: 0.3rem;
+        width: 10rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        outline: none;
+        background-color: var(--edit-input-body);
+        border-radius: 5px;
+        border: 2px solid var(--edit-input-border);
+        color: var(--font-col);
+    }
+    .tools{
+        height: 100%;
+        min-width: 8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 0.5rem;
+    }
+    .copyicon, .edticon, .delicon{
+        margin-left: 0.5rem;
+    }
+    .closebutton{
+        height: 3.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--edit-header-mob);
+        user-select: none;
+    }
+    .closebutton button{
+        font-size: 1.1rem;
+        font-weight: bold;
+        min-width: 4.6rem;
+        height: 70%;
+        background-color: transparent;
+        border: 2px solid var(--font-col);
+        border-radius: 10px;
+        color: var(--font-col);
+        margin-right: 1rem;
+    }
+    .closebutton button:active{
+        background-color: rgb(88, 88, 88);
+    }
+    .filenameDisplay2{
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0rem;
+        margin-left: 1rem;
+        color: var(--filetitle);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
