@@ -20,7 +20,7 @@ header{
 
 
 .logo{
-    margin-left: 5rem;
+    margin-left: 2rem;
     font-size: 1.7rem;
     font-weight: bold;
     color: var(--logo);
@@ -40,7 +40,7 @@ header{
     cursor: pointer;
     height: 2.2rem;
     width: 5.5rem;
-    border: 2px solid var(--logo-font);
+    border: 2px solid var(--font-col);
     background-color: var(--menu-itemcol);
     display: flex;
     font-weight: bold;
@@ -67,6 +67,7 @@ header{
     }
     .logo{
         margin-left: 1rem;
+        color: var(--font-col);
     }
     .menuContainer{
         position: fixed;

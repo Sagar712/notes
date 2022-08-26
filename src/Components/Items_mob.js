@@ -6,7 +6,6 @@ import OneItem from './OneItem';
 export default function Items_mob(props) {
     let obj = new DBcontrol();
     let allTasks = obj.callHH();
-    obj.modify();
     let Str=[];
     let i=1;
     

@@ -28,7 +28,7 @@ export default function Navigator_mob(props) {
     return (
         <>
             <header>
-                <div className="logo"> Script</div>
+                <div className="logo">Secure notes</div>
 
                 <div className="bar">
                     <div className="addbtnbar" onClick={props.popupAddBtn}>

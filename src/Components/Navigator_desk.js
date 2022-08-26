@@ -12,7 +12,7 @@ export default function Navigator_desk(props) {
 
     return (
         <header>
-            <div className="logo"><i className="fas fa-mask"></i> Script</div>
+            <div className="logo"><i className="fas fa-mask"></i> Secure Notes</div>
 
             <div className="menuitems">
                 <div className="icons" onClick={props.popupAddBtn}>

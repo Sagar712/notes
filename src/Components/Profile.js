@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './profile.css'
 
-function Profile() {
+function Profile(props) {
 
     const [uname, setUname] = useState('');
     const [butn, setButn] = useState();
@@ -73,6 +73,7 @@ function Profile() {
             localStorage.setItem('ScriptDarkMode', 'OFF')
             document.documentElement.setAttribute("data-theme", "root");
         }
+        props.useForceUpdate()
     }
 
     return (

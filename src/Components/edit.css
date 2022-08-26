@@ -191,14 +191,24 @@
     }
     .tools{
         height: 100%;
-        min-width: 8rem;
+        width: 100vw;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         margin-right: 0.5rem;
     }
+    .tools div{
+        user-select: none;
+    }
     .copyicon, .edticon, .delicon{
         margin-left: 0.5rem;
+        transform: scale(1.1);
+    }
+    .edticon{
+        transform: translateX(235%) scale(1.1);        
+    }
+    .delicon{
+        transform: translateX(380%) scale(1.1);
     }
     .closebutton{
         height: 3.5rem;
@@ -231,5 +241,42 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+    }
+    .opacitor{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.412);
+        z-index: 9999;
+        visibility: hidden;
+        transition: 0.4s all ease;
+    }
+    .opacitor.show{
+        visibility: visible;
+        transition: 0.4s all ease;
+    }
+    .passwd{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50vh);
+        height: 8rem;
+        width: 15rem;
+        background-color: var(--body-background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        z-index: 99990;
+        transition: 0.4s all ease;
+    }
+    .passwd.show{
+        transform: translate(-50%, -50%);
+        transition: 0.4s all ease;
+    }
+    .passwd input{
+        display: block;
     }
 }

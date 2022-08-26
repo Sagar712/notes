@@ -23,7 +23,6 @@ function App() {
     console.log("Reloaded App");
     if (obj.getX() > 0) {
       let allItems = obj.callHH();
-      console.log(obj.getX())
       setDes(allItems[obj.getX()].description);
     }
   }
@@ -58,11 +57,12 @@ function App() {
           <Navigator_desk popupAddBtn={triggerPop} />
           <div className="container">
             <Items_desk useForceUpdate={useForceUpdate} />
-            <Edit_desk desc={des} allItems={obj.callHH()} index={obj.getX()} useForceUpdate={useForceUpdate} deltePostOpertn={deltePostOpertn} />
+            <Edit_desk desc={des} allItems={obj.callHH()} index={obj.getX()} getX={obj.getX} useForceUpdate={useForceUpdate} deltePostOpertn={deltePostOpertn} />
           </div>
         </>
 
         :
+
         <>
           <Navigator_mob popupAddBtn={triggerPop} />
           <div className="container">
@@ -74,7 +74,7 @@ function App() {
       <Backup />
       <Export useForceUpdate={useForceUpdate} />
       <PopupAdd triggerPop={triggerPop} />
-      <Profile />
+      <Profile useForceUpdate={useForceUpdate} />
     </div>
   );
 }
