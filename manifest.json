@@ -1,0 +1,15 @@
+{
+  "short_name": "Script App",
+  "name": "Encrypting data app",
+  "icons": [
+    {
+      "src": "./Mask.png",
+      "sizes":"557x557",
+      "type":"image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}
