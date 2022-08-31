@@ -60,7 +60,7 @@ export default function Navigator_mob(props) {
                             document.querySelector('.profilepage1').classList.add('active');
                             window.history.pushState(null, null, null);
                         }}>
-                            Profile
+                            Other
                         </li>
                     </ul>
                 </div>

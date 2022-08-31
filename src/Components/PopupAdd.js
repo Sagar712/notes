@@ -25,7 +25,7 @@ export default function PopupAdd(props) {
                 </div>
 
                 <div className="description">
-                    <textarea id="description2" rows="5" placeholder=" Description...."></textarea>
+                    <textarea id="description2" rows="5" placeholder=" Write here..."></textarea>
                 </div>
                 <div className="finalbtns">
                     <button onClick={addItem}>Save</button>

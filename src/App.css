@@ -13,6 +13,7 @@
   --lock-back: #C4C4C4;
   --menu-itemcol: #464646;
   --green-flag:rgb(0, 204, 68);
+  --lock-symbol:rgb(199, 199, 199);
   --yellow-flag: rgb(223, 223, 0);
 
   --edit-header:rgb(37, 37, 37);
@@ -49,6 +50,7 @@
   --lock-back: #C4C4C4;
   --menu-itemcol: #E8E8E8;
   --green-flag:rgb(0, 161, 54);
+  --lock-symbol:rgb(71, 71, 71);
   --yellow-flag: rgb(223, 223, 0);
 
   --edit-header:rgb(155, 155, 155);

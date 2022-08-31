@@ -97,6 +97,13 @@ function Profile(props) {
                         <div className="circle"></div>
                     </div>
                 </div>
+                <div className='changeNightMode' onClick={() => {
+                    document.getElementById('key').value = ''
+                    alert("All unlocked folders have been locked!")
+                }}>
+                    <div style={{ marginLeft: "1rem" }}>Lock all</div>
+                    <i className="fas fa-lock"></i>
+                </div>
                 <div className='changeNightMode' onClick={DeleteAll}>
                     <div style={{ marginLeft: "1rem" }}>Delete all</div>
                     <i className="fas fa-trash-alt"></i>
